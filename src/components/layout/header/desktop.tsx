@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { categories } from "@/data";
 import { cn } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
 
 export const DesktopHeader = () => {
   const config = useConfig();
@@ -36,13 +37,13 @@ export const DesktopHeader = () => {
               <NavigationMenuTrigger>Dropship</NavigationMenuTrigger>
               <NavigationMenuContent className="!w-full left-0 right-0">
                 <div className="container mx-auto p-6">
-                  <div className="grid grid-cols-4 gap-3">
-                    {categories.map((category) => (
+                  <div className="grid grid-cols-5 gap-3">
+                    {categories?.map((category) => (
                       <Link
                         key={category.id}
                         to={`/category/${category.slug}`}
-                        className="flex flex-col items-center gap-2.5 p-3 rounded-md hover:bg-accent/50 transition-colors group cursor-pointer">
-                        <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                        className="flex items-center gap-2.5 rounded hover:bg-primary/10 transition-colors group cursor-pointer overflow-hidden">
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                           <OptimizedImage
                             src={category.image}
                             alt={category.name}
@@ -55,6 +56,7 @@ export const DesktopHeader = () => {
                       </Link>
                     ))}
                   </div>
+                  <Separator className="mt-6 h-1" />
                 </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
