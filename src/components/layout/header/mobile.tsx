@@ -1,3 +1,3 @@
 export const MobileHeader = () => {
-  return <div>dsdfsdf</div>;
+  return <div className="flex md:hidden items-center justify-center"></div>;
 };

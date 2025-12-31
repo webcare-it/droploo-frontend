@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { useConfig } from "@/hooks/useConfig";
-import { getConfig } from "@/helper";
 import { OptimizedImage } from "@/components/common/optimized-image";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,33 +10,22 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { categories } from "@/data";
-
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
+import { HeaderLogo } from "./logo";
 
 export const DesktopHeader = () => {
-  const config = useConfig();
-  const logo = getConfig(config, "header_logo")?.value as string;
-
   return (
     <div className="hidden md:flex items-center justify-between w-full">
       <div className="flex flex-1 justify-start items-center h-full gap-8">
-        <Link to="/" className="flex items-center shrink-0">
-          <div className="h-12 w-32 relative">
-            <OptimizedImage
-              src={logo || ""}
-              alt="Logo"
-              className="object-contain"
-            />
-          </div>
-        </Link>
+        <HeaderLogo />
 
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Dropship</NavigationMenuTrigger>
+              <NavigationMenuTrigger>Dropshipping</NavigationMenuTrigger>
               <NavigationMenuContent className="!w-full left-0 right-0">
-                <div className="container mx-auto p-6">
+                <div className="container mx-auto py-6">
                   <div className="grid grid-cols-5 gap-3">
                     {categories?.map((category) => (
                       <Link
