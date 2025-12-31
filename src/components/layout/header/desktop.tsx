@@ -6,13 +6,15 @@ import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
+  navigationMenuItem,
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { categories } from "@/data";
-import { cn } from "@/lib/utils";
+
 import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 
 export const DesktopHeader = () => {
   const config = useConfig();
@@ -43,62 +45,52 @@ export const DesktopHeader = () => {
                         key={category.id}
                         to={`/category/${category.slug}`}
                         className="flex items-center gap-2.5 rounded hover:bg-primary/10 transition-colors group cursor-pointer overflow-hidden">
-                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                        <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                           <OptimizedImage
                             src={category.image}
                             alt={category.name}
-                            className="w-10 h-10 object-contain"
+                            className="w-12 h-12 object-contain"
                           />
                         </div>
-                        <span className="text-xs font-medium text-center leading-tight">
+                        <span className="text-xs font-semibold text-center leading-tight">
                           {category.name}
                         </span>
                       </Link>
                     ))}
                   </div>
-                  <Separator className="mt-6 h-1" />
+                  <Separator className="my-4 h-1" />
+                  <div className="flex items-center justify-between w-full">
+                    <h3 className="text-lg font-semibold text-center leading-tight">
+                      🚀Start your Dropshipping journey
+                    </h3>
+                    <Button variant="default" size="lg" asChild>
+                      <Link to="/get-started">Get Started</Link>
+                    </Button>
+                  </div>
                 </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <Link
-                to="/integration"
-                className={cn(
-                  "inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground transition-colors"
-                )}>
-                Integration
-              </Link>
+            <NavigationMenuItem className={cn(navigationMenuItem())}>
+              <Link to="/integration">Integration</Link>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <Link
-                to="/blogs"
-                className={cn(
-                  "inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground transition-colors"
-                )}>
-                Blogs
-              </Link>
+            <NavigationMenuItem className={cn(navigationMenuItem())}>
+              <Link to="/blogs">Blogs</Link>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <Link
-                to="/winning-products"
-                className={cn(
-                  "inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground transition-colors"
-                )}>
-                Winning Products
-              </Link>
+            <NavigationMenuItem className={cn(navigationMenuItem())}>
+              <Link to="/winning-products">Winning Products</Link>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
 
       <div className="flex items-center gap-4 shrink-0">
-        <Button variant="ghost" asChild>
-          <Link to="/login">Login</Link>
+        <Button variant="ghost" asChild className={cn(navigationMenuItem())}>
+          <Link to="/login">Sign in</Link>
         </Button>
-        <Button variant="default" asChild>
+        <Button variant="default" size="lg" asChild>
           <Link to="/get-started">Get Started</Link>
         </Button>
       </div>
