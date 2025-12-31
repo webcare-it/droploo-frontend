@@ -75,7 +75,7 @@ export const DesktopHeader = () => {
 
       <div className="flex items-center gap-4 shrink-0">
         <Button variant="ghost" asChild className={cn(navigationMenuItem())}>
-          <Link to="/login">Sign in</Link>
+          <Link to="/signin">Sign in</Link>
         </Button>
         <Button variant="default" size="lg" asChild>
           <Link to="/get-started">Get Started</Link>
