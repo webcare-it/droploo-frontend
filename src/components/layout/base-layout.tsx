@@ -1,0 +1,38 @@
+import { useGetWishlist } from "@/controllers/wishlistController";
+import { useGetCart } from "@/controllers/cartController";
+import { ScrollToTop } from "@/components/common/scroll-to-top";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { Footer } from "./footer";
+import nprogress from "nprogress";
+import { Header } from "./header";
+
+interface Props {
+  children: React.ReactNode;
+}
+
+export const BaseLayout = ({ children }: Props) => {
+  useGetCart();
+  useGetWishlist();
+
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  useEffect(() => {
+    nprogress.start();
+    nprogress.done();
+  }, [location.pathname]);
+
+  return (
+    <section className="min-h-screen">
+      <Header />
+
+      <section className="container md:mx-auto">{children}</section>
+      <Footer />
+      <ScrollToTop />
+    </section>
+  );
+};

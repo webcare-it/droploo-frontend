@@ -1,0 +1,44 @@
+// import { useEffect } from "react";
+// import { useGetConfig } from "@/api/queries/useGetConfig";
+// import { ConfigContext, type ConfigType } from "@/hooks/useConfig";
+// import { updatePrimaryColor, updatePrimaryForeground } from "@/lib/chroma";
+// import { ServerError } from "@/pages/utils-pages/server";
+// import { RootPageLoading } from "@/components/layout/root-loading";
+// import { getConfig } from "@/helper";
+// import { MaintenancePage } from "@/pages/utils-pages/maintenance";
+import { config } from "@/data";
+import { ConfigContext } from "@/hooks/useConfig";
+
+export const ConfigProvider = ({ children }: { children: React.ReactNode }) => {
+  // const { data, isLoading, error } = useGetConfig();
+  // const config = data?.data as ConfigType[];
+  // const primaryColor = getConfig(config, "base_color")?.value;
+  // const secondaryColor = getConfig(config, "base_hov_color")?.value;
+
+  // useEffect(() => {
+  //   if (primaryColor && typeof primaryColor === "string") {
+  //     updatePrimaryColor(primaryColor);
+  //   }
+  //   if (secondaryColor && typeof secondaryColor === "string") {
+  //     updatePrimaryForeground(secondaryColor);
+  //   }
+  // }, [primaryColor, secondaryColor]);
+
+  // const isMaintenance = getConfig(config, "maintenance_mode")?.value;
+
+  // if (isMaintenance === "1") {
+  //   return <MaintenancePage />;
+  // }
+
+  // if (error) {
+  //   return <ServerError />;
+  // }
+
+  // if (isLoading) {
+  //   return <RootPageLoading />;
+  // }
+
+  return (
+    <ConfigContext.Provider value={config}>{children}</ConfigContext.Provider>
+  );
+};

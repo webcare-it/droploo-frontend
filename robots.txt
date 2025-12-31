@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /dashboard/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /search?
+
+Sitemap: https://example.com/sitemap.xml  
