@@ -68,9 +68,9 @@ function SheetContent({
           className
         )}
         {...props}>
-        <div className="flex items-center justify-between p-4">
+        <div className="flex items-center justify-between p-4 top-0 sticky z-50 bg-background">
           <MobileHead>
-            <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-primary rounded-xs  transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none">
+            <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-primary rounded-xs  transition-opacity hover:opacity-100 focus:outline-hidden disabled:pointer-events-none">
               <X
                 size={32}
                 strokeWidth={3}

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { OptimizedImage } from "@/components/common/optimized-image";
 import { Button } from "@/components/ui/button";
 import {
@@ -39,7 +39,7 @@ export const DesktopHeader = () => {
                             className="w-12 h-12 object-contain"
                           />
                         </div>
-                        <span className="text-xs font-semibold text-center leading-tight">
+                        <span className="text-base font-semibold text-center leading-tight group-hover:text-primary">
                           {category.name}
                         </span>
                       </Link>
@@ -57,18 +57,10 @@ export const DesktopHeader = () => {
                 </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
-
-            <NavigationMenuItem className={cn(navigationMenuItem())}>
-              <Link to="/integration">Integration</Link>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem className={cn(navigationMenuItem())}>
-              <Link to="/blogs">Blogs</Link>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem className={cn(navigationMenuItem())}>
-              <Link to="/winning-products">Winning Products</Link>
-            </NavigationMenuItem>
+            <NavItem path="/integration">Integration</NavItem>
+            <NavItem path="/blogs">Blogs</NavItem>
+            <NavItem path="/winning-products">Winning Products</NavItem>
+            <NavItem path="/pricing">Pricing</NavItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
@@ -82,5 +74,26 @@ export const DesktopHeader = () => {
         </Button>
       </div>
     </div>
+  );
+};
+
+const NavItem = ({
+  children,
+  path,
+}: {
+  children: React.ReactNode;
+  path: string;
+}) => {
+  const location = useLocation();
+  return (
+    <NavigationMenuItem
+      className={cn(
+        navigationMenuItem(),
+        location.pathname === path && "bg-primary/10 text-primary"
+      )}>
+      <Link to={path} className="w-full h-full">
+        {children}
+      </Link>
+    </NavigationMenuItem>
   );
 };
