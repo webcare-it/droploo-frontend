@@ -1,7 +1,7 @@
 import {
   HomeSectionTitle,
   HomeSectionTitleSkeleton,
-} from "@/components/common/section-title";
+} from "@/components/common/title";
 import type { ProductType } from "@/type";
 import { CardLayout } from "@/components/common/card-layout";
 import { ProductCard, ProductCardSkeleton } from "@/components/card/product";

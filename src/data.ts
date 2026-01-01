@@ -241,15 +241,15 @@ export const home = {
   },
   trustworthy: {
     video: {
-      type: "facebook / youtube",
-      is_reel: true,
-      video_id: "",
+      type: "youtube",
+      is_reel: false,
+      video_id: "6dWcAPrTnWY",
     },
     info: {
-      title: "",
-      desc_one: "",
-      desc_two: "",
-      desc_three: "",
+      title: "500K+ Sellers Trust Spocket To Grow Their Business",
+      desc_one: "100M+ Product Catalog",
+      desc_two: "US & EU Suppliers",
+      desc_three: "Winning Products",
     },
   },
   what_we_do_for_you: {

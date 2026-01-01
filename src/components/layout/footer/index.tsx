@@ -14,6 +14,7 @@ import {
   Linkedin,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { LayoutContainer } from "../base-layout";
 
 export const Footer = () => {
   const config = useConfig();
@@ -35,7 +36,7 @@ export const Footer = () => {
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white pt-16 pb-8">
-      <div className="container mx-auto px-4 md:px-6">
+      <LayoutContainer>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-4">
             <div className="flex items-center">
@@ -151,7 +152,7 @@ export const Footer = () => {
             <QuickLink path="/terms-condition">Terms & Conditions</QuickLink>
           </ul>
         </div>
-      </div>
+      </LayoutContainer>
     </footer>
   );
 };

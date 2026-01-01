@@ -1,6 +1,6 @@
 import type { ProductType } from "@/type";
 import { BaseLayout } from "@/components/layout/base-layout";
-import { SectionTitle } from "@/components/common/section-title";
+import { SectionTitle } from "@/components/common/title";
 import { CardLayout } from "@/components/common/card-layout";
 import { ProductCard, ProductCardSkeleton } from "@/components/card/product";
 import { AnimationWrapper } from "@/components/common/animation-wrapper";
