@@ -59,8 +59,9 @@ export const DesktopHeader = () => {
             </NavigationMenuItem>
             <NavItem path="/integration">Integration</NavItem>
             <NavItem path="/blogs">Blogs</NavItem>
-            <NavItem path="/winning-products">Winning Products</NavItem>
-            <NavItem path="/pricing">Pricing</NavItem>
+            <NavItem path="/winning-products">Winning products</NavItem>
+            <NavItem path="/about-us">About us</NavItem>
+            <NavItem path="/contact-us">Contact us</NavItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>

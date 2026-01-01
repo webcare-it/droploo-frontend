@@ -60,11 +60,11 @@ export const config: ConfigType[] = [
   {
     type: "footer_description",
     value:
-      "We are a passionate team dedicated to delivering innovative solutions and exceptional experiences to our customers worldwide.",
+      "Droploo is a leading e-commerce platform that helps businesses grow by providing them with the tools and resources they need to succeed.",
   },
   {
     type: "copy_rights_text",
-    value: "© 2025 My Awesome Website. All rights reserved.",
+    value: "Droploo. All rights reserved.",
   },
 ];
 

@@ -90,9 +90,9 @@ export const MobileHeader = () => {
 
               <NavItem path="/integration">Integration</NavItem>
               <NavItem path="/blogs">Blogs</NavItem>
-              <NavItem path="/winning-products">Winning Products</NavItem>
-              <NavItem path="/pricing">Pricing</NavItem>
-
+              <NavItem path="/winning-products">Winning products</NavItem>
+              <NavItem path="/about-us">About us</NavItem>
+              <NavItem path="/contact-us">Contact us</NavItem>
               <Button variant="default" size="lg" className="mt-8" asChild>
                 <Link to="/get-started">Get Started</Link>
               </Button>
