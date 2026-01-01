@@ -1,20 +1,15 @@
-import { useGetWishlist } from "@/controllers/wishlistController";
-import { useGetCart } from "@/controllers/cartController";
-import { ScrollToTop } from "@/components/common/scroll-to-top";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { Footer } from "./footer";
 import nprogress from "nprogress";
 import { Header } from "./header";
+import { useLocation } from "react-router-dom";
+import { ScrollToTop } from "@/components/common/scroll-to-top";
 
 interface Props {
   children: React.ReactNode;
 }
 
 export const BaseLayout = ({ children }: Props) => {
-  useGetCart();
-  useGetWishlist();
-
   const location = useLocation();
 
   useEffect(() => {
