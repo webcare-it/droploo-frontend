@@ -198,6 +198,7 @@ export const home = {
       "https://binaryfolks.com/wp-content/uploads/2025/08/Intro-3.png",
       "https://binaryfolks.com/wp-content/uploads/2025/08/Intro-3.png",
     ],
+    review_title: "120+ satisfied customers",
   },
   achievements: [
     {
