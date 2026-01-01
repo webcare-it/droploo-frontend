@@ -29,8 +29,9 @@ export const BaseLayout = ({ children }: Props) => {
   return (
     <section className="min-h-screen">
       <Header />
-
-      <section className="container md:mx-auto">{children}</section>
+      <section className="container md:mx-auto px-4 md:px-0">
+        {children}
+      </section>
       <Footer />
       <ScrollToTop />
     </section>

@@ -188,10 +188,16 @@ export const categories: CategoryType[] = [
 
 export const home = {
   hero: {
-    title: "",
-    sub_title: "",
-    description: "",
-    images: ["imag1", "image2"],
+    title: "Dropshipping Bangladesh!",
+    sub_title: "Empowering Your Business with Dropshipping",
+    description:
+      "We help you grow your business with our easy-to-use platform and expert advice.  Join us today and let's build something amazing together!",
+    images: [
+      "https://www.cloudways.com/blog/wp-content/uploads/What-is-Dropshipping.jpg",
+      "https://static.vecteezy.com/system/resources/previews/006/159/855/non_2x/dropshipping-blue-flat-design-long-shadow-glyph-icon-drop-shipping-order-and-product-delivery-to-customer-goods-transportation-e-commerce-sales-business-silhouette-illustration-vector.jpg",
+      "https://binaryfolks.com/wp-content/uploads/2025/08/Intro-3.png",
+      "https://binaryfolks.com/wp-content/uploads/2025/08/Intro-3.png",
+    ],
   },
   achievements: [
     {
