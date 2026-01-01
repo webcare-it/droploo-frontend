@@ -8,10 +8,11 @@ import nprogress from "nprogress";
 import { Header } from "./header";
 
 interface Props {
+  isContainer?: boolean;
   children: React.ReactNode;
 }
 
-export const BaseLayout = ({ children }: Props) => {
+export const BaseLayout = ({ isContainer, children }: Props) => {
   useGetCart();
   useGetWishlist();
 
@@ -29,7 +30,8 @@ export const BaseLayout = ({ children }: Props) => {
   return (
     <section className="min-h-screen">
       <Header />
-      <section className="container md:mx-auto px-4 md:px-0">
+      <section
+        className={isContainer ? "container md:mx-auto px-4 md:px-0" : ""}>
         {children}
       </section>
       <Footer />

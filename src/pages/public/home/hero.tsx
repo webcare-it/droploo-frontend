@@ -11,7 +11,7 @@ import { OptimizedImage } from "@/components/common/optimized-image";
 
 export const HeroSection = () => {
   return (
-    <section className="my-8 md:my-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+    <section className="py-8 md:py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
       <div className="md:col-span-1">
         <h1 className="text-3xl md:text-6xl font-bold text-primary mb-6 md:mb-10">
           {home?.hero?.title}

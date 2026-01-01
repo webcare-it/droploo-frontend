@@ -202,21 +202,42 @@ export const home = {
   },
   achievements: [
     {
-      id: "",
-      name: "",
-      description: "",
-      image: "",
+      id: "1",
+      name: "20M+",
+      description: "Winning Products Catalog",
+      image:
+        "https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/512x512/shadow/shopping_cart.png",
+    },
+    {
+      id: "2",
+      name: "500K+",
+      description: "Entrepreneurs Love Spocket",
+      image:
+        "https://t3.ftcdn.net/jpg/07/13/42/18/360_F_713421841_SkdVcuz1Qr2AxY5GBsjRiQEilqj0GKqM.jpg",
+    },
+    {
+      id: "3",
+      name: "$2B+",
+      description: "Earned By Our Entrepreneurs",
+      image:
+        "https://www.shutterstock.com/image-vector/holographic-trophy-3d-icon-purple-600nw-2538066889.jpg",
     },
   ],
   feature_one: {
-    title: "",
-    description: "",
-    image: "",
+    title: "Discover Winning Products",
+    sub_title: "Winning Products",
+    description:
+      "Discover winning dropshipping products and top-selling items that drive sales and boost your e-commerce success. Sell high-demand products with Spocket.",
+    image:
+      "https://firebearstudio.com/blog/wp-content/uploads/2022/12/Screenshot-2022-12-29-at-13.45.18.png",
   },
-  feature_tow: {
-    title: "",
-    description: "",
-    image: "",
+  feature_two: {
+    title: "Discover Winning Products",
+    sub_title: "Winning Products",
+    description:
+      "Discover winning dropshipping products and top-selling items that drive sales and boost your e-commerce success. Sell high-demand products with Spocket.",
+    image:
+      "https://firebearstudio.com/blog/wp-content/uploads/2022/12/Screenshot-2022-12-29-at-13.45.18.png",
   },
   trustworthy: {
     video: {
